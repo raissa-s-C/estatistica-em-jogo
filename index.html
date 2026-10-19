@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+ <meta name="color-scheme" content="light only">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Estatística em Jogo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="sky" aria-hidden="true"></div>
+<div class="bubbles" id="bubbles" aria-hidden="true"></div>
+<main class="app">
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round"><path d="M5 20V12M12 20V5M19 20v-5"/></svg>
+      </span>
+      Estatística em Jogo
+    </div>
+    <div class="hud" aria-label="Placar">
+      <div class="pill"><small>Pontos</small><span id="score">0</span></div>
+      <div class="pill"><small>Vidas</small><span class="hearts" id="hearts"></span></div>
+      <button class="btn-ghost" id="restart" type="button">Reiniciar</button>
+    </div>
+  </header>
+  <section class="progress glass" aria-label="Progresso do jogo">
+    <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="bar"><i id="barFill"></i></div>
+    <div class="steps" id="steps"></div>
+  </section>
+  <section class="stage" id="stage" aria-live="polite"></section>
+</main>
+<div id="modalRoot"></div>
+<noscript>Ative o JavaScript para jogar.</noscript>
+<script src="data.js"></script>
+<script src="characters.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
